@@ -6,6 +6,15 @@
 > [!NOTE]
 > **Community Revival & Extended Edition**: This repository is an active, open-source continuation of the archived project by [NoeFabris](https://github.com/NoeFabris/opencode-antigravity-auth) (and earlier work by [@jenslys](https://github.com/jenslys) and [CLIProxyAPI](https://github.com/router-for-me/CLIProxyAPI)). It fixes critical upstream bugs and unlocks the newest Google Antigravity models.
 
+> [!IMPORTANT]
+> **Project Status (October 2026) - maintenance paused.**
+> After extended real-world use we are pausing new plugin work until Google ships a model that is genuinely worth paying for:
+> - **Gemini 3.8 Flash** is very fast at generating code, but it still produces failures and does not demonstrate parity with models such as **DeepSeek** - let alone the current frontier models.
+> - Google has not shipped **Gemini 3.5 Pro** or **Gemini 4 ("Argon")**, and there is no clear release date for either.
+> - The Antigravity backend stays unreliable for paid plans: the tier is recognized (`paidTier = g1-pro-tier`) but not applied (`currentTier = free-tier`), Claude 5.5 is unavailable, and Claude 4.6 + GPT-OSS-120b are scheduled for removal on **2026-11-02**.
+>
+> The plugin remains functional as-is (pin a known-good release). Maintenance resumes when Google offers something actually worth paying for. Full write-up: [`docs/entitlement-bug-2026-10.md`](docs/entitlement-bug-2026-10.md).
+
 ---
 
 ### What's New & Changed in this Fork (v2.0.0)

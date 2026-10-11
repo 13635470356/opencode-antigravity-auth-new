@@ -1,5 +1,15 @@
 # Changelog
 
+## [Unreleased] - Maintenance paused
+
+### Changed (docs only)
+
+- **Maintenance paused pending a competitive Google model.** After extended real-world use, new plugin work is on hold until Google ships a model genuinely worth paying for:
+  - **Gemini 3.8 Flash** is very fast at code generation but still produces failures and does not reach parity with models such as DeepSeek, let alone frontier models.
+  - **Gemini 3.5 Pro** and **Gemini 4 ("Argon")** have not shipped and have no clear release date.
+  - The Antigravity backend remains unreliable for paid plans (tier recognized but not applied), Claude 5.5 is unavailable, and Claude 4.6 + GPT-OSS-120b are scheduled for removal on **2026-11-02**.
+- No functional changes. The plugin stays usable as-is; pin a known-good release.
+
 ## [2.0.2] - 2026-10-07
 
 ### Fixed
