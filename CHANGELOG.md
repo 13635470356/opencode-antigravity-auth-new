@@ -1,14 +1,24 @@
 # Changelog
 
-## [Unreleased] - Maintenance paused
+## [2.0.3] - 2026-10-13
 
-### Changed (docs only)
+### Changed (docs + deps)
 
 - **Maintenance paused pending a competitive Google model.** After extended real-world use, new plugin work is on hold until Google ships a model genuinely worth paying for:
   - **Gemini 3.8 Flash** is very fast at code generation but still produces failures and does not reach parity with models such as DeepSeek, let alone frontier models.
-  - **Gemini 3.5 Pro** and **Gemini 4 ("Argon")** have not shipped and have no clear release date.
-  - The Antigravity backend remains unreliable for paid plans (tier recognized but not applied), Claude 5.5 is unavailable, and Claude 4.6 + GPT-OSS-120b are scheduled for removal on **2026-11-02**.
+  - **2026-10-13:** Google released **Gemini 4 ("Argon")** but restricted it to **Google AI Ultra / Enterprise** (not Google AI Pro). The same day, **Gemini 3.7 Flash, Gemini 3.6 Flash and Gemini 3.1 Pro moved to Enterprise-only**, leaving consumer plans with **Gemini 3.8 Flash** as the only Gemini model. **Gemini 3.5 Pro** has still not shipped.
+  - The Antigravity backend remains unreliable for paid plans (tier recognized but not applied; `paidTier` even dropped to free on some accounts), Claude 5.5 is unavailable, and Claude 4.6 + GPT-OSS-120b are scheduled for removal on **2026-11-02**.
 - No functional changes. The plugin stays usable as-is; pin a known-good release.
+
+### Dependencies
+
+- Bump `@opencode-ai/plugin` from `1.18.33` to `1.18.35` (#36).
+- Bump `@types/node` from `26.6.3` to `26.6.4` (#35).
+- Bump the vitest group (`vitest`, `@vitest/coverage-v8`, `@vitest/ui`) from `5.0.2` to `5.0.3` (#34).
+
+### Fixed
+
+- README: removed a dead link to an internal entitlement report that is no longer published in this repository.
 
 ## [2.0.2] - 2026-10-07
 

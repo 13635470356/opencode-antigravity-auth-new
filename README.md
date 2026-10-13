@@ -10,10 +10,10 @@
 > **Project Status (October 2026) - maintenance paused.**
 > After extended real-world use we are pausing new plugin work until Google ships a model that is genuinely worth paying for:
 > - **Gemini 3.8 Flash** is very fast at generating code, but it still produces failures and does not demonstrate parity with models such as **DeepSeek** - let alone the current frontier models.
-> - Google has not shipped **Gemini 3.5 Pro** or **Gemini 4 ("Argon")**, and there is no clear release date for either.
+> - On **2026-10-13** Google released **Gemini 4 ("Argon")**, but it is restricted to **Google AI Ultra / Enterprise** - not to Google AI Pro. On the same day, **Gemini 3.7 Flash, 3.6 Flash and 3.1 Pro moved to Enterprise-only**, leaving consumer plans with **Gemini 3.8 Flash** as the only Gemini model. **Gemini 3.5 Pro** has still not shipped.
 > - The Antigravity backend stays unreliable for paid plans: the tier is recognized (`paidTier = g1-pro-tier`) but not applied (`currentTier = free-tier`), Claude 5.5 is unavailable, and Claude 4.6 + GPT-OSS-120b are scheduled for removal on **2026-11-02**.
 >
-> The plugin remains functional as-is (pin a known-good release). Maintenance resumes when Google offers something actually worth paying for. Full write-up: [`docs/entitlement-bug-2026-10.md`](docs/entitlement-bug-2026-10.md).
+> The plugin remains functional as-is (pin a known-good release). Maintenance resumes when Google offers something actually worth paying for.
 
 ---
 
