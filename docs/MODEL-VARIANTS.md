@@ -59,38 +59,12 @@ Gemini 3 models use string-based thinking levels. Available levels differ by mod
 
 > **Note:** The API rejects invalid levels (e.g., `"minimal"` on Pro). Configure variants accordingly.
 
-### Gemini 3.1 Pro Example
+### Gemini 3.8 Flash Example
 
 ```json
 {
-  "antigravity-gemini-3.1-pro": {
-    "name": "Gemini 3.1 Pro (Antigravity)",
-    "limit": { "context": 1048576, "output": 65535 },
-    "modalities": { "input": ["text", "image", "pdf"], "output": ["text"] },
-    "variants": {
-      "low": { "thinkingLevel": "low" },
-      "high": { "thinkingLevel": "high" }
-    }
-  }
-}
-```
-
-### Gemini 3.7 Flash & 3.6 Flash Example
-
-```json
-{
-  "antigravity-gemini-3.7-flash": {
-    "name": "Gemini 3.7 Flash (Antigravity)",
-    "limit": { "context": 1048576, "output": 65536 },
-    "modalities": { "input": ["text", "image", "pdf"], "output": ["text"] },
-    "variants": {
-      "low": { "thinkingLevel": "low" },
-      "medium": { "thinkingLevel": "medium" },
-      "high": { "thinkingLevel": "high" }
-    }
-  },
-  "antigravity-gemini-3.6-flash": {
-    "name": "Gemini 3.6 Flash (Antigravity)",
+  "antigravity-gemini-3.8-flash": {
+    "name": "Gemini 3.8 Flash (Antigravity)",
     "limit": { "context": 1048576, "output": 65536 },
     "modalities": { "input": ["text", "image", "pdf"], "output": ["text"] },
     "variants": {
@@ -101,6 +75,8 @@ Gemini 3 models use string-based thinking levels. Available levels differ by mod
   }
 }
 ```
+
+> **Note (2026-10-13):** Gemini 3.7 Flash, Gemini 3.6 Flash and Gemini 3.1 Pro moved to **Google AI Ultra / Enterprise-only** and are no longer registered by this plugin for consumer plans. Gemini 3.8 Flash is the only Gemini model available on consumer plans.
 
 ---
 

@@ -1,5 +1,18 @@
 # Changelog
 
+## [2.0.4] - 2026-10-13
+
+### Removed
+
+- **Pruned dead Gemini models from the consumer catalog.** Following the 2026-10-13 plan change, `antigravity-gemini-3.7-flash`, `antigravity-gemini-3.6-flash` and `antigravity-gemini-3.1-pro` are **Google AI Ultra / Enterprise-only** and are no longer registered by the plugin (selecting them would fail with `404`). `OPENCODE_MODEL_DEFINITIONS` and `OPENCODE_WHITELIST_MODELS` now only expose models actually available on consumer plans.
+
+### Changed
+
+- Registered models are now: `antigravity-gemini-3.8-flash` (default), `antigravity-claude-sonnet-4-6`, `antigravity-claude-opus-4-6-thinking`, `antigravity-gpt-oss-120b-medium`.
+- Backend model resolvers for 3.7/3.6/3.1 Pro are retained (harmless) for future/Enterprise use, but no longer surfaced as selectable models.
+- Docs (`README.md`, `docs/MODEL-VARIANTS.md`): removed dead model entries; noted that Gemini 3.8 Flash is the only consumer Gemini model.
+- Updated `config/updater` tests and the `/antigravity-setup` report to the trimmed catalog.
+
 ## [2.0.3] - 2026-10-13
 
 ### Changed (docs + deps)

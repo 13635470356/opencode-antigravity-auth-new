@@ -17,9 +17,6 @@ describe("OPENCODE_MODEL_DEFINITIONS", () => {
     expect(modelNames).toEqual([
       "antigravity-claude-opus-4-6-thinking",
       "antigravity-claude-sonnet-4-6",
-      "antigravity-gemini-3.1-pro",
-      "antigravity-gemini-3.6-flash",
-      "antigravity-gemini-3.7-flash",
       "antigravity-gemini-3.8-flash",
       "antigravity-gpt-oss-120b-medium",
     ]);
@@ -29,27 +26,10 @@ describe("OPENCODE_MODEL_DEFINITIONS", () => {
     expect(OPENCODE_WHITELIST_MODELS.sort()).toEqual(Object.keys(OPENCODE_MODEL_DEFINITIONS).sort());
   });
 
-  it("defines Gemini 3 variants for Antigravity models", () => {
+  it("defines Gemini 3.8 Flash variants", () => {
     expect(getModel("antigravity-gemini-3.8-flash").variants).toEqual({
       low: { thinkingLevel: "low" },
       medium: { thinkingLevel: "medium" },
-      high: { thinkingLevel: "high" },
-    });
-
-    expect(getModel("antigravity-gemini-3.7-flash").variants).toEqual({
-      low: { thinkingLevel: "low" },
-      medium: { thinkingLevel: "medium" },
-      high: { thinkingLevel: "high" },
-    });
-
-    expect(getModel("antigravity-gemini-3.6-flash").variants).toEqual({
-      low: { thinkingLevel: "low" },
-      medium: { thinkingLevel: "medium" },
-      high: { thinkingLevel: "high" },
-    });
-
-    expect(getModel("antigravity-gemini-3.1-pro").variants).toEqual({
-      low: { thinkingLevel: "low" },
       high: { thinkingLevel: "high" },
     });
   });

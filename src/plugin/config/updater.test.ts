@@ -78,11 +78,11 @@ describe("updateOpencodeConfig", () => {
     // Old model should be replaced
     expect(writtenConfig.provider.google.models["old-model"]).toBeUndefined();
     // New models should be present
-    expect(writtenConfig.provider.google.models["antigravity-gemini-3.7-flash"]).toBeDefined();
+    expect(writtenConfig.provider.google.models["antigravity-gemini-3.8-flash"]).toBeDefined();
     expect(writtenConfig.provider.google.models["antigravity-claude-sonnet-4-6"]).toBeDefined();
     expect(writtenConfig.provider.google.models["antigravity-gemini-3.5-flash"]).toBeUndefined();
     // Whitelist should be updated
-    expect(writtenConfig.provider.google.whitelist).toContain("antigravity-gemini-3.7-flash");
+    expect(writtenConfig.provider.google.whitelist).toContain("antigravity-gemini-3.8-flash");
     expect(writtenConfig.provider.google.whitelist).not.toContain("old-model");
   });
 
@@ -247,8 +247,8 @@ describe("updateOpencodeConfig", () => {
     const writtenConfig = JSON.parse(fs.readFileSync(configPath, "utf-8"));
     expect(writtenConfig.plugins).toContain("other-plugin");
     expect(writtenConfig.providers.google.models["old-model"]).toBeUndefined();
-    expect(writtenConfig.providers.google.models["antigravity-gemini-3.7-flash"]).toBeDefined();
-    expect(writtenConfig.providers.google.whitelist).toContain("antigravity-gemini-3.7-flash");
+    expect(writtenConfig.providers.google.models["antigravity-gemini-3.8-flash"]).toBeDefined();
+    expect(writtenConfig.providers.google.whitelist).toContain("antigravity-gemini-3.8-flash");
     expect(writtenConfig.providers.commandcode).toBeDefined();
     // No conflicting legacy keys
     expect(writtenConfig.plugin).toBeUndefined();
@@ -298,7 +298,7 @@ describe("updateOpencodeConfig", () => {
     expect(writtenConfig.plugin).toContain("other-plugin");
     expect(writtenConfig.plugin).toContain("opencode-antigravity-auth@latest");
     expect(writtenConfig.provider.google.region).toBe("us-central1");
-    expect(writtenConfig.provider.google.models["antigravity-gemini-3.7-flash"]).toBeDefined();
+    expect(writtenConfig.provider.google.models["antigravity-gemini-3.8-flash"]).toBeDefined();
   });
 
   test("prefers existing opencode.jsonc when using default config path", async () => {

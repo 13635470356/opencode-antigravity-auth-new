@@ -54,7 +54,7 @@
 
 ---
 
-Enable OpenCode to authenticate against **Antigravity** (Google's IDE) via OAuth so you can use Antigravity rate limits and access models like `gemini-3.8-flash`, `gemini-3.7-flash`, `gemini-3.6-flash`, `gemini-3.1-pro`, and `claude-opus-4-6-thinking` with your Google credentials.
+Enable OpenCode to authenticate against **Antigravity** (Google's IDE) via OAuth so you can use Antigravity rate limits and access models like `gemini-3.8-flash`, `claude-sonnet-4-6`, `claude-opus-4-6-thinking` and `gpt-oss-120b` with your Google credentials.
 
 ## What You Get
 
@@ -181,9 +181,6 @@ Then in `~/.config/opencode/opencode.json`:
 | Model | Variants | Description |
 |---|---|---|
 | `antigravity-gemini-3.8-flash` | `low`, `medium`, `high` | **Gemini 3.8 Flash** with thinking tiers *(Default)* |
-| `antigravity-gemini-3.7-flash` | `low`, `medium`, `high` | **Gemini 3.7 Flash** with dynamic thinking |
-| `antigravity-gemini-3.6-flash` | `low`, `medium`, `high` | **Gemini 3.6 Flash** with thinking tiers |
-| `antigravity-gemini-3.1-pro` | `low`, `high` | **Gemini 3.1 Pro** with 1M token context |
 | `antigravity-claude-sonnet-4-6` | `low`, `medium`, `high`, `max` | Claude Sonnet 4.6 |
 | `antigravity-claude-opus-4-6-thinking` | `low`, `medium`, `high`, `max` | Claude Opus 4.6 with extended thinking |
 | `antigravity-gpt-oss-120b-medium` | `low`, `medium`, `high` | GPT-OSS 120B open-source model |
