@@ -1,5 +1,20 @@
 # Changelog
 
+## [2.0.5] - 2026-10-14
+
+### Fixed
+
+- **Thinking variant (effort) ignored on wrapped requests (closes #37).** In `prepareAntigravityRequest`, the backend model (`gemini-3.8-flash-{low|medium|high}`) was resolved from the *name-derived* tier **before** the variant/effort (`providerOptions.google.thinkingLevel` / `generationConfig.thinkingConfig.thinkingLevel`) was applied, so wrapped requests (what OpenCode sends) always fell back to `-low` regardless of the selected effort. The variant is now extracted and applied before any backend-model resolution, covering both wrapped and unwrapped bodies.
+
+| Case | Before | After |
+|---|---|---|
+| wrapped + effort high (providerOptions) | `gemini-3.8-flash-low` | `gemini-3.8-flash-high` |
+| wrapped + effort high (generationConfig) | `gemini-3.8-flash-low` | `gemini-3.8-flash-high` |
+| unwrapped + effort high | `gemini-3.8-flash-high` | `gemini-3.8-flash-high` |
+
+- Added 2 regression tests. Full suite: 39/39 files, 1059 passed.
+- Credit: approach inspired by community PR #38; landed as a minimal change that keeps the variants design.
+
 ## [2.0.4] - 2026-10-13
 
 ### Removed
